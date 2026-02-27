@@ -1,0 +1,58 @@
+name: Google Optimize API
+description: Google Optimize is a website optimization tool that helps you test variations of your website and personalize experiences for your visitors. This APIs.json file describes the Google Optimize API and related resources.
+image: https://www.gstatic.com/images/branding/product/1x/optimize_48dp.png
+url: https://optimize.google.com
+created: '2024'
+modified: '2024'
+apis:
+- name: Google Optimize API
+  description: API for managing Google Optimize experiments, variants, and accessing optimization data programmatically
+  image: https://www.gstatic.com/images/branding/product/1x/optimize_48dp.png
+  humanURL: https://optimize.google.com
+  baseURL: https://www.googleapis.com/optimize/v1
+  tags:
+  - optimization
+  - experimentation
+  - A/B testing
+  - personalization
+  - analytics
+  properties:
+  - type: Documentation
+    url: https://developers.google.com/optimize
+  - type: OpenAPI
+    url: https://www.googleapis.com/discovery/v1/apis/optimize/v1/rest
+  - type: Authentication
+    url: https://developers.google.com/optimize/devguides/authentication
+  - type: Pricing
+    url: https://optimize.google.com/optimize/pricing/
+  - type: Terms of Service
+    url: https://www.google.com/analytics/terms/us.html
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Support
+    url: https://support.google.com/optimize
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: SDK
+    url: https://developers.google.com/optimize/devguides/experiments
+common:
+- type: Portal
+  url: https://console.cloud.google.com/
+- type: Getting Started
+  url: https://support.google.com/optimize/answer/6211930
+- type: Blog
+  url: https://blog.google/products/marketingplatform/analytics/
+- type: Change Log
+  url: https://developers.google.com/optimize/release-notes
+maintainers:
+- name: Google
+  email: optimize-api@google.com
+  url: https://www.google.com
+tags:
+- optimization
+- testing
+- experiments
+- personalization
+- Google
+- marketing
+- analytics

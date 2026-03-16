@@ -1,5 +1,5 @@
 aid: google-optimize
-name: Google Optimize API
+name: Google Optimize
 description: Google Optimize is a website optimization tool that helps you test variations of your website and personalize experiences for your visitors. This APIs.json file describes the Google Optimize API and related resources.
 image: https://www.gstatic.com/images/branding/product/1x/optimize_48dp.png
 url: https://optimize.google.com

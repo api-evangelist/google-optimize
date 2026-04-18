@@ -1,0 +1,53 @@
+vocabulary: 1.0.0
+info:
+  provider: Google Optimize
+  description: Vocabulary for Google Optimize (sunset September 30, 2023). Historical
+    reference for A/B testing and web optimization.
+  created: '2026-04-17'
+  modified: '2026-04-17'
+operational:
+  apis:
+  - name: Google Optimize API
+    namespace: optimize
+    status: deprecated
+  resources:
+  - name: experiments
+    description: A/B test experiments (sunset).
+    actions:
+    - create
+    - get
+    - update
+    - delete
+  - name: variants
+    description: Test page variants (sunset).
+    actions:
+    - create
+    - get
+    - update
+  - name: objectives
+    description: Experiment goals and metrics (sunset).
+    actions:
+    - get
+    - set
+  - name: audiences
+    description: Targeting audience segments (sunset).
+    actions:
+    - get
+    - set
+capability:
+  personas:
+  - id: marketing-manager
+    name: Marketing Manager
+  - id: web-developer
+    name: Web Developer
+  - id: cro-specialist
+    name: CRO Specialist
+  domains:
+  - name: experimentation
+    resources:
+    - experiments
+    - variants
+  - name: targeting
+    resources:
+    - objectives
+    - audiences

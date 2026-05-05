@@ -1,0 +1,13 @@
+{
+  "repo": "google-optimize",
+  "feeds": [
+    {
+      "source": "https://blog.google/products/marketingplatform/analytics/",
+      "feed_url": "https://blog.google/products/marketingplatform/analytics/rss/",
+      "saved": 10,
+      "title": "Google Analytics products"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:29:02Z"
+}

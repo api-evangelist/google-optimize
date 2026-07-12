@@ -36,6 +36,10 @@ apis:
   - type: Documentation
     url: https://support.google.com/optimize/answer/12979939
 common:
+- type: VulnerabilityDisclosure
+  url: security/google-optimize-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/google-optimize-domain-security.yml
 - type: Documentation
   url: https://support.google.com/optimize/answer/12979939
   description: Google Optimize sunset announcement and migration guidance.

@@ -5,6 +5,17 @@ description: Google Optimize was a website optimization and A/B testing tool tha
   Optimize and Optimize 360 were sunset on September 30, 2023. Google recommends migrating
   to Google Analytics 4 with built-in A/B testing or third-party tools.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown

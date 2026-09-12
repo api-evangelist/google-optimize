@@ -4,92 +4,38 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Google Optimize
 providerId: google-optimize
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-tags:
-  - A/B Testing
-  - Analytics
-  - Deprecated
-  - Experimentation
-  - Google
-  - Optimization
-  - Personalization
-  - Sunset
-  - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Google Optimize API surface. Captures per-tier
-  quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to
-  be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Google Optimize API (Sunset)
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Google Optimize API (Sunset)
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Google Optimize API (Sunset)
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Google Optimize API (Sunset)
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Google Optimize API (Sunset)
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+generated: '2026-09-12'
+modified: '2026-09-12'
+method: searched
+source: https://support.google.com/optimize/answer/12979939
+description: >-
+  Rate limit record for Google Optimize. NO RATE LIMITS ARE PUBLISHED, because no API remains. The
+  developer portal at developers.google.com/optimize redirects in full to the sunset notice, the
+  documented base https://www.googleapis.com/optimize/v1 returns HTTP 404, and Google's own API
+  Discovery directory — 530 services on 2026-09-12 — contains no Optimize entry, so there is no
+  surface left to throttle and no runtime headers to observe.
+limit_count: 0
+limits: []
+headers: {}
+responseCodes: {}
+policies: []
+note: >-
+  This file REPLACES a 2026-05-04 bulk-sweep scaffold that asserted concrete numbers Google never
+  published — 10 requests/minute free, 100/minute professional, 1,000/minute enterprise, a
+  1,000-request monthly free quota, and a full X-RateLimit-* / Retry-After header set. None of it
+  was ever documented by the provider and none of it is observable, because the endpoint is gone.
+  An honest zero is the measurement.
+evidence:
+  - url: https://www.googleapis.com/optimize/v1
+    status: 404
+  - url: https://optimize.googleapis.com/
+    status: 404
+  - url: https://developers.google.com/optimize
+    status: 200
+    note: Redirects to the sunset notice; no developer reference remains.
+  - url: https://www.googleapis.com/discovery/v1/apis?name=optimize
+    status: 200
+    note: Returns an empty Google API directoryList — the service is not published.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

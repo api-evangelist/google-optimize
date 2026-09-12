@@ -1,0 +1,75 @@
+# Google Optimize
+
+> RETIRED PRODUCT — DO NOT ATTEMPT TO INTEGRATE. Google Optimize and Google Optimize 360 were
+> website A/B testing, multivariate testing and personalization tools from Google Marketing
+> Platform. Both were sunset on 30 September 2023. Every experiment and personalization still
+> running on that date was ended. There is no live API, no SDK, no console, and no pricing.
+
+Generated: 2026-09-12
+Method: generated (from this repository's apis.yml and probe artifacts — Google publishes no
+llms.txt for this product; /llms.txt returns 404 on www.google.com, developers.google.com and
+marketingplatform.google.com, and support.google.com answers 200 with an HTML shell).
+
+## Status
+
+- Sunset date: 2023-09-30
+- Editions retired: Google Optimize (free), Google Optimize 360 (enterprise)
+- Successor named by Google: Google Analytics 4, plus third-party A/B testing integrations
+- Third-party providers Google named as integration partners: AB Tasty, Optimizely, VWO
+- Firebase A/B Testing stopped relying on Optimize infrastructure on 2023-10-23
+
+## If you were asked to call this API
+
+Do not. Verified on 2026-09-12:
+
+- https://www.googleapis.com/optimize/v1 — HTTP 404
+- https://optimize.googleapis.com/ — HTTP 404
+- https://www.googleapis.com/discovery/v1/apis?name=optimize — HTTP 200, empty directory
+- https://developers.google.com/optimize — HTTP 200, redirects to the sunset notice
+- https://optimize.google.com/ — HTTP 200, redirects to the sunset notice
+- https://www.googleoptimize.com/optimize.js — HTTP 400, serves no container
+
+Google's own API Discovery directory listed 530 services on 2026-09-12 and none of them is
+Optimize. No OpenAPI, discovery document, GraphQL schema, AsyncAPI, gRPC proto, WSDL, MCP server
+or A2A agent card is published for this product on any host.
+
+## Do not confuse with
+
+These are different Google products that match on the word "optimize" and must not be treated as
+Google Optimize:
+
+- Google Cloud Optimization AI / @google-cloud/optimization — fleet routing
+- Google Cloud App Optimize / @google-cloud/appoptimize — mobile app optimization
+- Google Maps Route Optimization API — routing
+- Google OR-Tools / Operations Research API — combinatorial optimization
+- google/vizier — blackbox optimization research
+
+## Reference
+
+- [Sunset notice](https://support.google.com/optimize/answer/12979939): Google's own
+  "[Sunset September 2023] Google Optimize" help article, including the sunset FAQ and migration
+  guidance. This is the only first-party document that remains.
+- [Google Marketing Platform](https://marketingplatform.google.com/about/): the product family
+  Optimize belonged to. Optimize is no longer listed.
+- [Google Marketing Platform blog](https://blog.google/products/marketingplatform/analytics/):
+  announcements for the successor analytics products.
+- [Google security.txt](https://www.google.com/.well-known/security.txt): corporate vulnerability
+  disclosure contacts, published by Google for the whole estate.
+- [Google vulnerability reward program](https://g.co/vrp): disclosure policy.
+
+## Artifacts in this profile
+
+- lifecycle/google-optimize-lifecycle.yml — the sunset timeline and every redirect probed
+- plans/google-optimize-plans-pricing.yml — no published plans (plan_count 0)
+- rate-limits/google-optimize-rate-limits.yml — no published limits (limit_count 0)
+- packages/google-optimize-packages.yml — no first-party SDK ever shipped; 5 abandoned community
+  npm wrappers
+- well-known/google-optimize-well-known.yml — 42 /.well-known/ probes across 6 hosts, 1 real
+  document
+- security/google-optimize-domain-security.yml — TLS/DNS posture
+- security/google-optimize-vulnerability-disclosure.yml — Google VRP
+
+## About this file
+
+This profile is maintained by API Evangelist (https://apievangelist.com) and is not operated by
+or affiliated with Google. Corrections: info@apievangelist.com.

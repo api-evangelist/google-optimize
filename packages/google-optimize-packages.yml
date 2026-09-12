@@ -1,0 +1,109 @@
+specification: API Commons Packages
+specificationVersion: '0.1'
+provider: Google Optimize
+providerId: google-optimize
+generated: '2026-09-12'
+modified: '2026-09-12'
+method: searched
+source: >-
+  npm registry metadata (registry.npmjs.org), the Google Optimize sunset notice, and the
+  google / googleapis / GoogleCloudPlatform GitHub organizations.
+description: >-
+  Client library inventory for Google Optimize. THE HEADLINE FINDING IS AN ABSENCE: Google never
+  published a first-party server-side SDK for Optimize in any language registry, and the one
+  first-party distribution that did exist — the optimize.js container snippet served from
+  www.googleoptimize.com — was a CDN script tag, not a package, and no longer serves a container
+  after the 2023-09-30 sunset. Everything listed below with official:false is a community wrapper
+  around that snippet, and every one of them is abandoned.
+official_sdk_count: 0
+package_count: 6
+ownership_note: >-
+  STEP 0c ownership check. Several npm and PyPI packages match the word "optimize" under Google
+  ownership and NONE of them belongs to this product: @google-cloud/optimization and the archived
+  googleapis/python-optimization and googleapis/java-optimization repositories are Google Cloud
+  Optimization AI (fleet routing), @google-cloud/appoptimize is Google Cloud App Optimize, and
+  google/vizier is blackbox optimization research. They are deliberately excluded rather than
+  credited to Google Optimize.
+packages:
+  - name: optimize.js container snippet
+    registry: cdn
+    official: true
+    language: javascript
+    url: https://www.googleoptimize.com/optimize.js
+    version: null
+    published: null
+    status: retired
+    note: >-
+      The only first-party distribution Google Optimize ever shipped: an unversioned, unpinned
+      script tag loaded as https://www.googleoptimize.com/optimize.js?id=OPT-XXXXXXX. There is no
+      registry metadata endpoint to query and the URL was never pinned to a version, so a consumer
+      could not tell what build they were getting either — hence version: null. Probed 2026-09-12:
+      the script path returns HTTP 400 and the domain root returns HTTP 404; the host still
+      resolves to Google infrastructure but serves no experiment container.
+  - name: google-optimize-service
+    registry: npm
+    official: false
+    language: javascript
+    url: https://www.npmjs.com/package/google-optimize-service
+    repository: https://github.com/haensl/google-optimize-service
+    version: 1.1.21
+    published: '2024-06-21'
+    status: abandoned
+    note: >-
+      Community wrapper. Latest release postdates the sunset by nine months but the product it
+      abstracts had already been switched off.
+  - name: react-optimize
+    registry: npm
+    official: false
+    language: javascript
+    url: https://www.npmjs.com/package/react-optimize
+    repository: https://github.com/hudovisk/react-optimize
+    version: 2.4.1
+    published: '2022-04-26'
+    status: abandoned
+    note: Community React integration. Last release predates the sunset by seventeen months.
+  - name: '@react-hook/google-optimize'
+    registry: npm
+    official: false
+    language: javascript
+    url: https://www.npmjs.com/package/@react-hook/google-optimize
+    repository: https://github.com/jaredLunde/react-hook
+    version: 1.2.1
+    published: '2020-10-14'
+    status: abandoned
+    note: Community React hook for reading Optimize variants.
+  - name: react-google-optimize
+    registry: npm
+    official: false
+    language: javascript
+    url: https://www.npmjs.com/package/react-google-optimize
+    repository: https://github.com/gustavobini/react-google-optimize
+    version: 0.2.0
+    published: '2019-02-19'
+    status: abandoned
+    note: Community React helpers. Last release 2019.
+  - name: '@fenderdigital/google-optimize'
+    registry: npm
+    official: false
+    language: javascript
+    url: https://www.npmjs.com/package/@fenderdigital/google-optimize
+    version: 1.1.0
+    published: '2019-05-10'
+    status: abandoned
+    note: Single-company utility module published by Fender Digital, not by Google.
+registries_checked:
+  - registry: npm
+    result: no first-party package; 5 community wrappers found
+  - registry: PyPI
+    result: no first-party package for this product
+  - registry: Maven Central
+    result: no first-party package for this product
+  - registry: NuGet
+    result: no first-party package for this product
+  - registry: RubyGems
+    result: no first-party package for this product
+  - registry: pkg.go.dev
+    result: no first-party package for this product
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

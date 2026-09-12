@@ -1,0 +1,116 @@
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+provider: Google Optimize
+providerId: google-optimize
+generated: '2026-09-12'
+modified: '2026-09-12'
+method: searched
+source: https://support.google.com/optimize/answer/12979939
+description: >-
+  Lifecycle record for Google Optimize. This is a fully retired product: Google Optimize and
+  Optimize 360 were sunset on 2023-09-30, every experiment and personalization still running on
+  that date was ended, and as of 2026-09-12 every developer surface the product ever had now
+  redirects to a single sunset notice. The record below is the tombstone, not a deprecation
+  schedule — there is nothing left to deprecate.
+status: retired
+current_version: null
+versioning:
+  scheme: null
+  note: >-
+    No versioning policy is published. The product's only documented API base was
+    https://www.googleapis.com/optimize/v1; that host returns HTTP 404 for the path and the
+    Google API Discovery directory no longer lists the service at all.
+deprecation:
+  policy_published: true
+  policy_url: https://support.google.com/optimize/answer/12979939
+  mechanism: >-
+    A single Help Center sunset notice, plus origin-level redirects from every former developer
+    and console URL onto that notice. No RFC 8594 Sunset or Deprecation response headers are
+    served, because no endpoint remains to serve them.
+  sunset_headers: false
+  rfc8594: false
+events:
+  - date: '2023-01-20'
+    type: announcement
+    summary: >-
+      Google announced that Optimize and Optimize 360 would be sunset later in 2023, stating the
+      product "did not have many of the features and services that our customers request and need
+      for experimentation testing".
+    source: https://support.google.com/optimize/answer/12979939
+  - date: '2023-09-30'
+    type: sunset
+    summary: >-
+      Google Optimize and Optimize 360 stopped being available. Any experiments and
+      personalizations still active on that date ended.
+    source: https://support.google.com/optimize/answer/12979939
+  - date: '2023-10-23'
+    type: dependency-cutover
+    summary: >-
+      Firebase A/B Testing stopped relying on Google Optimize infrastructure. Firebase used the
+      Optimize infrastructure for inference computation for experiments started on or before
+      2023-10-23; experiments started after that date use frequentist inference instead.
+    source: https://support.google.com/optimize/answer/12979939
+migration:
+  recommended_path: >-
+    Google directs former Optimize users to Google Analytics 4, and states it has "made our APIs
+    publicly available so anyone can integrate their A/B testing tool with Google Analytics".
+  named_partners:
+    - AB Tasty
+    - Optimizely
+    - VWO
+  note: >-
+    Named verbatim from the sunset notice as the A/B testing providers Google is collaborating
+    with on Google Analytics integrations. They are alternatives, not successors owned by Google.
+  successor_surface: >-
+    Google Analytics 4 (Admin and Data APIs) — profiled separately in the catalog; those
+    contracts belong to Google Analytics, not to this retired product.
+sla: null
+status_page:
+  published: false
+  note: >-
+    No status page covered Google Optimize, and none exists now. Google Marketing Platform
+    published no per-product status dashboard for the service.
+deprecated_operations: []
+evidence:
+  - url: https://support.google.com/optimize/answer/12979939
+    status: 200
+    note: >-
+      302s to https://support.google.com/analytics/answer/12979939 — the live sunset notice,
+      titled "[Sunset September 2023] Google Optimize".
+  - url: https://developers.google.com/optimize
+    status: 200
+    note: >-
+      The entire Optimize developer portal now redirects to the sunset notice. There is no
+      developer documentation left to read.
+  - url: https://developers.google.com/optimize/devguides/experiments
+    status: 200
+    note: Redirects to the sunset notice.
+  - url: https://optimize.google.com/
+    status: 200
+    note: The product console host redirects to the sunset notice.
+  - url: https://marketingplatform.google.com/about/optimize/
+    status: 200
+    note: >-
+      The Google Marketing Platform product page for Optimize is gone; the URL redirects up to
+      https://marketingplatform.google.com/about/, which no longer lists the product.
+  - url: https://www.googleapis.com/optimize/v1
+    status: 404
+    note: The API base URL recorded in apis.yml no longer resolves to a service.
+  - url: https://optimize.googleapis.com/
+    status: 404
+    note: No dedicated Google API service host exists for Optimize.
+  - url: https://www.googleapis.com/discovery/v1/apis
+    status: 200
+    note: >-
+      Google's own API Discovery directory returned 530 services on 2026-09-12 and NONE of them
+      matches "optimize" for this product. The filtered query
+      https://www.googleapis.com/discovery/v1/apis?name=optimize returns an empty directoryList.
+      This is the definitive first-party confirmation that no Optimize API is published.
+  - url: https://www.googleoptimize.com/optimize.js
+    status: 400
+    note: >-
+      The first-party client snippet host still resolves to Google infrastructure but serves no
+      container; the domain root returns 404.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

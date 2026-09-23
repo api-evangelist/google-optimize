@@ -5,149 +5,143 @@ providerId: google-optimize
 generated: '2026-09-12'
 modified: '2026-09-12'
 method: probed
-source: >-
-  Anonymous HTTPS probes of /.well-known/ on every host this record names — the
-  registrable domain and www, the API baseURL host, the documentation host, the
-  retired product console host, and the Google Marketing Platform marketing host.
-description: >-
-  Well-known discovery probe for Google Optimize. Google Optimize and Optimize 360 were
-  sunset on 2023-09-30 and the product serves no /.well-known/ documents of its own; the
-  only real document found on any probed host is the corporate Google security.txt served
-  from google.com and www.google.com, which is published by Google the parent company and
-  covers the whole estate rather than this retired product.
+source: Anonymous HTTPS probes of /.well-known/ on every host this record names — the registrable domain
+  and www, the API baseURL host, the documentation host, the retired product console host, and the Google
+  Marketing Platform marketing host.
+description: Well-known discovery probe for Google Optimize. Google Optimize and Optimize 360 were sunset
+  on 2023-09-30 and the product serves no /.well-known/ documents of its own; the only real document found
+  on any probed host is the corporate Google security.txt served from google.com and www.google.com, which
+  is published by Google the parent company and covers the whole estate rather than this retired product.
 notes:
-  - >-
-    FALSE-POSITIVE WARNING — support.google.com and optimize.google.com answer HTTP 200 to
-    EVERY /.well-known/ path with the same ~1.5 MB Google Help Center SPA shell (identical
-    byte counts across unrelated paths). These are catch-all HTML responses, not documents,
-    and are recorded below with shell: true so nothing downstream mistakes them for a hit.
-  - >-
-    optimize.google.com does not serve a console any more; it 302s to the sunset notice at
-    support.google.com/analytics/answer/12979939.
+- 'FALSE-POSITIVE WARNING — support.google.com and optimize.google.com answer HTTP 200 to EVERY /.well-known/
+  path with the same ~1.5 MB Google Help Center SPA shell (identical byte counts across unrelated paths).
+  These are catch-all HTML responses, not documents, and are recorded below with shell: true so nothing
+  downstream mistakes them for a hit.'
+- optimize.google.com does not serve a console any more; it 302s to the sunset notice at support.google.com/analytics/answer/12979939.
 hosts:
-  - host: google.com
-    role: registrable domain
-    documents:
-      - path: /.well-known/security.txt
-        status: 200
-        file: well-known/google-optimize-security.txt
-        content_type: text/plain
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/oauth-authorization-server
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-      - path: /.well-known/agent-card.json
-        status: 404
-      - path: /.well-known/agent.json
-        status: 404
-  - host: www.google.com
-    role: website host (apis.yml Website pointer)
-    documents:
-      - path: /.well-known/security.txt
-        status: 200
-        file: well-known/google-optimize-security.txt
-        content_type: text/plain
-        note: byte-identical to the google.com copy
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/oauth-authorization-server
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-      - path: /.well-known/agent-card.json
-        status: 404
-      - path: /.well-known/agent.json
-        status: 404
-  - host: www.googleapis.com
-    role: API baseURL host (https://www.googleapis.com/optimize/v1)
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/oauth-authorization-server
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-      - path: /.well-known/agent-card.json
-        status: 404
-      - path: /.well-known/agent.json
-        status: 404
-  - host: support.google.com
-    role: documentation host
-    documents:
-      - path: /.well-known/security.txt
-        status: 200
-        shell: true
-        note: Help Center SPA shell (1,472,685 bytes) returned for every path — not a document
-      - path: /.well-known/openid-configuration
-        status: 200
-        shell: true
-      - path: /.well-known/oauth-authorization-server
-        status: 200
-        shell: true
-      - path: /.well-known/api-catalog
-        status: 200
-        shell: true
-      - path: /.well-known/ai-plugin.json
-        status: 200
-        shell: true
-      - path: /.well-known/agent-card.json
-        status: 200
-        shell: true
-      - path: /.well-known/agent.json
-        status: 200
-        shell: true
-  - host: optimize.google.com
-    role: retired product console host
-    documents:
-      - path: /.well-known/security.txt
-        status: 200
-        shell: true
-        note: same Help Center SPA shell after a 302 to the sunset notice — not a document
-      - path: /.well-known/openid-configuration
-        status: 200
-        shell: true
-      - path: /.well-known/oauth-authorization-server
-        status: 200
-        shell: true
-      - path: /.well-known/api-catalog
-        status: 200
-        shell: true
-      - path: /.well-known/ai-plugin.json
-        status: 200
-        shell: true
-      - path: /.well-known/agent-card.json
-        status: 200
-        shell: true
-      - path: /.well-known/agent.json
-        status: 200
-        shell: true
-  - host: marketingplatform.google.com
-    role: Google Marketing Platform marketing host
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
-      - path: /.well-known/oauth-authorization-server
-        status: 404
-      - path: /.well-known/api-catalog
-        status: 404
-      - path: /.well-known/ai-plugin.json
-        status: 404
-      - path: /.well-known/agent-card.json
-        status: 404
-      - path: /.well-known/agent.json
-        status: 404
+- host: google.com
+  role: registrable domain
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: google-optimize-security.txt
+    content_type: text/plain
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.google.com
+  role: website host (apis.yml Website pointer)
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: google-optimize-security.txt
+    content_type: text/plain
+    note: byte-identical to the google.com copy
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.googleapis.com
+  role: API baseURL host (https://www.googleapis.com/optimize/v1)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: support.google.com
+  role: documentation host
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    shell: true
+    note: Help Center SPA shell (1,472,685 bytes) returned for every path — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    shell: true
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    shell: true
+  - path: /.well-known/api-catalog
+    status: 200
+    shell: true
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    shell: true
+  - path: /.well-known/agent-card.json
+    status: 200
+    shell: true
+  - path: /.well-known/agent.json
+    status: 200
+    shell: true
+- host: optimize.google.com
+  role: retired product console host
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    shell: true
+    note: same Help Center SPA shell after a 302 to the sunset notice — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    shell: true
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    shell: true
+  - path: /.well-known/api-catalog
+    status: 200
+    shell: true
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    shell: true
+  - path: /.well-known/agent-card.json
+    status: 200
+    shell: true
+  - path: /.well-known/agent.json
+    status: 200
+    shell: true
+- host: marketingplatform.google.com
+  role: Google Marketing Platform marketing host
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
 summary:
   hosts_probed: 6
   paths_probed: 42
@@ -160,5 +154,5 @@ summary:
   agent_card: false
   html_shell_false_positives: 14
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

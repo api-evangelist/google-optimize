@@ -41,7 +41,7 @@ tags:
 - Google
 - Optimization
 - Personalization
-- Sunset
+- Defunct
 apis:
 - aid: google-optimize:optimize-api
   name: Google Optimize API (Sunset)
@@ -55,7 +55,6 @@ apis:
   - A/B Testing
   - Deprecated
   - Experimentation
-  - Sunset
   properties:
   - type: Documentation
     url: https://support.google.com/optimize/answer/12979939
@@ -173,3 +172,4 @@ x-coverage:
   checked: '2026-09-12'
 x-parent: google
 x-relationship: product
+x-status: defunct

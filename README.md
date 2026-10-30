@@ -1,4 +1,4 @@
-# Google Optimize (google-optimize)
+# Google Optimize
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,64 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-> **SUNSET NOTICE:** Google Optimize and Optimize 360 were sunset on September 30, 2023. This profile is maintained as a historical reference. Google recommends migrating to Google Analytics 4 with built-in experiments or third-party A/B testing tools.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-Google Optimize was a website optimization and A/B testing tool that helped businesses test variations of web pages and personalize experiences for visitors.
+Google Optimize was a website optimization and A/B testing tool that helped businesses test variations of web pages and personalize experiences. Google Optimize and Optimize 360 were sunset on September 30, 2023. Google recommends migrating to Google Analytics 4 with built-in A/B testing or third-party tools.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/google-optimize/refs/heads/main/apis.yml)
+**Areas:** A/B Testing · Analytics · Deprecated · Experimentation · Google · Optimization · Personalization · Defunct
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Google Optimize on APIs.io (historical record)
 
-## Tags:
+Everything profiled for Google Optimize is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-optimize/](https://apis.io/providers/google-optimize/)** — or go straight to one of the APIs or properties below.
 
- - A/B Testing, Analytics, Deprecated, Experimentation, Google, Optimization, Personalization, Sunset
+### APIs (1)
 
-## Timestamps
+- [Google Optimize API (Sunset)](https://apis.io/apis/google-optimize/optimize-api/) — API for managing Google Optimize experiments, variants, and accessing optimization data. Sunset on September 30, 2023. Migrate to Google Analytics 4…
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-17
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-1 API: Google Optimize API (Sunset September 30, 2023).
+#### Vocabulary (1)
 
-## Features (Historical)
+The provider's domain terms, defined.
 
-| Name | Description |
-|------|-------------|
-| A/B Testing | Test two or more variants of a web page. (Sunset) |
-| Multivariate Testing | Test combinations of multiple page elements. (Sunset) |
-| Redirect Tests | Test entirely different pages against each other. (Sunset) |
-| Personalization | Deliver targeted experiences to audience segments. (Sunset) |
-| Google Analytics Integration | Native integration for targeting and reporting. (Sunset) |
-| Visual Editor | WYSIWYG editor for creating test variants. (Sunset) |
+- [Google Optimize Vocabulary](https://apis.io/vocabularies/google-optimize/google-optimize-vocabulary/)
 
-## Use Cases (Historical)
+#### Governance rules (1)
 
-| Name | Description |
-|------|-------------|
-| Landing Page Optimization | Test landing page variations for conversion. (Sunset) |
-| CTA Testing | Test call-to-action variations. (Sunset) |
-| Content Personalization | Show different content to segments. (Sunset) |
-| Checkout Flow Optimization | Test checkout process variations. (Sunset) |
+Spectral rulesets for the provider's contracts.
 
-## Solutions (Historical)
+- [Google Optimize API Rules](https://apis.io/rules/google-optimize/google-optimize-spectral-rules/)
 
-| Name | Description |
-|------|-------------|
-| Google Optimize | Free A/B testing tool. Sunset September 30, 2023. |
-| Google Optimize 360 | Enterprise A/B testing. Sunset September 30, 2023. |
+#### Security (2)
 
-## Vocabulary
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Google Optimize Vocabulary](vocabulary/google-optimize-vocabulary.yaml) — 4 resources, 1 API (deprecated), 2 domains, 3 personas
+- [Google Optimize Domain Security](https://apis.io/security/google-optimize/google-optimize-domain-security/)
+- [Google Optimize Vulnerability Disclosure](https://apis.io/security/google-optimize/google-optimize-vulnerability-disclosure/)
 
-## Rules
+#### Plans and pricing (1)
 
-- [Google Optimize Spectral Rules](rules/google-optimize-spectral-rules.yml) — 13 rules
+Published plans, tiers and prices.
 
-## Maintainers
+- [Google Optimize Plans Pricing](https://apis.io/plans/google-optimize/google-optimize-plans-pricing/)
 
-**FN:** Kin Lane
+#### Rate limits (1)
 
-**Email:** kin@apievangelist.com
+Published request limits.
+
+- [Google Optimize Rate Limits](https://apis.io/rate-limits/google-optimize/google-optimize-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Optimize Finops](https://apis.io/finops/google-optimize/google-optimize-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
+- [Documentation](https://support.google.com/optimize/answer/12979939)
+- [Blog](https://blog.google/products/marketingplatform/analytics/)
+- [Security](https://g.co/vrp)
+- [Terms of service](https://www.google.com/analytics/terms/us.html)
+- [Privacy policy](https://policies.google.com/privacy)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Optimize: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-optimize/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
